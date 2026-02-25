@@ -1,0 +1,8 @@
+{
+  "name": "সেবাবন্ধু (Seba Bondhu)",
+  "description": "A comprehensive volunteer service and emergency help application for social impact and community support, designed with a focus on trust and accessibility in Bangla.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
