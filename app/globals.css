@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  --color-primary: #064e3b; /* Dark Green */
+  --color-secondary: #d4af37; /* Gold */
+  --color-accent: #f59e0b; /* Amber */
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 161 94% 13%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 45 64% 52%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 161 94% 13%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 161 94% 5%;
+    --foreground: 210 40% 98%;
+    --card: 161 94% 7%;
+    --card-foreground: 210 40% 98%;
+    --popover: 161 94% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 161 94% 13%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 45 64% 52%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 161 94% 12%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 161 94% 12%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 161 94% 15%;
+    --input: 161 94% 15%;
+    --ring: 161 94% 25%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 30-15 30-15-30z' fill='%23d4af37' fill-opacity='0.05'/%3E%3C/svg%3E");
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #f59e0b 100%);
+}
+
+.green-gradient {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+}

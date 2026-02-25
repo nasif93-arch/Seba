@@ -1,26 +1,35 @@
 {
-  "name": "সেবাবন্ধু-(seba-bondhu)",
+  "name": "ramadan-pro",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "tsc --noEmit"
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint"
   },
   "dependencies": {
-    "lucide-react": "^0.563.0",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "recharts": "^3.7.0"
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "firebase": "^11.3.1",
+    "framer-motion": "^12.4.7",
+    "lucide-react": "^0.475.0",
+    "next": "15.1.7",
+    "next-themes": "^0.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.1",
+    "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.2.1",
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "tailwindcss": "^4.2.1",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@tailwindcss/postcss": "^4.0.7",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.39.3",
+    "eslint-config-next": "^16.1.6",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.7",
+    "typescript": "^5.7.3"
   }
 }

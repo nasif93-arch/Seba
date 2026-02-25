@@ -1,8 +1,7 @@
 {
-  "name": "সেবাবন্ধু (Seba Bondhu)",
-  "description": "A comprehensive volunteer service and emergency help application for social impact and community support, designed with a focus on trust and accessibility in Bangla.",
+  "name": "Ramadan Pro",
+  "description": "A comprehensive spiritual companion for the holy month of Ramadan with prayer times, Quran, and more.",
   "requestFramePermissions": [
-    "geolocation",
-    "camera"
+    "geolocation"
   ]
 }
