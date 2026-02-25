@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { User, BloodGroup } from '../types';
 import { BANGLA_STRINGS } from '../constants';
 import { Search, Phone, MessageSquare, Heart } from 'lucide-react';
+import { formatTimeAgo } from '../utils';
 
 interface BloodDonorsViewProps {
   donors: User[];
@@ -59,7 +60,9 @@ const BloodDonorsView: React.FC<BloodDonorsViewProps> = ({ donors }) => {
             <div className="flex-1">
               <h4 className="font-bold text-gray-900 dark:text-white">{donor.name}</h4>
               <p className="text-xs text-gray-500">{donor.address}</p>
-              <p className="text-[10px] text-gray-400 mt-1">শেষ রক্তদান: ৩ মাস আগে</p>
+              {donor.lastDonated && (
+                <p className="text-[10px] text-gray-400 mt-1">শেষ রক্তদান: {formatTimeAgo(new Date(donor.lastDonated))}</p>
+              )}
             </div>
 
             <div className="flex gap-2">

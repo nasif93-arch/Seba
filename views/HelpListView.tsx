@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { HelpRequest, UrgencyLevel, SkillType } from '../types';
 import { BANGLA_STRINGS } from '../constants';
 import { MapPin, Phone, Clock, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { formatTimeAgo } from '../utils';
 
 interface HelpListViewProps {
   requests: HelpRequest[];
@@ -54,7 +55,7 @@ const HelpListView: React.FC<HelpListViewProps> = ({ requests, onAccept }) => {
               </span>
               <div className="flex items-center gap-1 text-xs text-gray-400">
                 <Clock size={12} />
-                <span>২ ঘণ্টা আগে</span>
+                <span>{formatTimeAgo(new Date(req.timestamp))}</span>
               </div>
             </div>
 

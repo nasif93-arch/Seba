@@ -36,6 +36,7 @@ export interface User {
   isAvailable: boolean;
   isVolunteer: boolean;
   totalHelps: number;
+  lastDonated?: Date;
 }
 
 export interface HelpRequest {

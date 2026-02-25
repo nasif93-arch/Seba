@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HelpRequest, User } from '../types';
+import { HelpRequest, User, SkillType } from '../types';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { Activity, Users, ShieldAlert, CheckCircle } from 'lucide-react';
 
@@ -18,10 +18,10 @@ const AdminView: React.FC<AdminViewProps> = ({ requests, users }) => {
   ];
 
   const chartData = [
-    { name: 'ত্রাণ', value: requests.filter(r => r.type === require('../types').SkillType.RELIEF).length },
-    { name: 'চিকিৎসা', value: requests.filter(r => r.type === require('../types').SkillType.MEDICAL).length },
-    { name: 'রক্তদান', value: requests.filter(r => r.type === require('../types').SkillType.BLOOD).length },
-    { name: 'উদ্ধার', value: requests.filter(r => r.type === require('../types').SkillType.RESCUE).length },
+    { name: 'ত্রাণ', value: requests.filter(r => r.type === SkillType.RELIEF).length },
+    { name: 'চিকিৎসা', value: requests.filter(r => r.type === SkillType.MEDICAL).length },
+    { name: 'রক্তদান', value: requests.filter(r => r.type === SkillType.BLOOD).length },
+    { name: 'উদ্ধার', value: requests.filter(r => r.type === SkillType.RESCUE).length },
   ];
 
   const COLORS = ['#059669', '#3b82f6', '#ef4444', '#8b5cf6'];

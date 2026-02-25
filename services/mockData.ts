@@ -13,6 +13,7 @@ export const mockUsers: User[] = [
     isAvailable: true,
     isVolunteer: true,
     totalHelps: 12,
+    lastDonated: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000), // 3 months ago
   },
   {
     id: 'u2',
@@ -25,6 +26,7 @@ export const mockUsers: User[] = [
     isAvailable: false,
     isVolunteer: true,
     totalHelps: 8,
+    lastDonated: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000), // 15 days ago
   }
 ];
 

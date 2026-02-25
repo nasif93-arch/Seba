@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { ViewState, User, HelpRequest } from './types';
+import { ViewState, User, HelpRequest, SkillType } from './types';
 import { NAV_ITEMS, BANGLA_STRINGS } from './constants';
 import { mockUsers, mockHelpRequests } from './services/mockData';
 import HomeView from './views/HomeView';
@@ -54,7 +54,7 @@ const App: React.FC = () => {
           setAllRequests(prev => prev.map(r => r.id === id ? {...r, status: 'accepted' as const} : r));
         }} />;
       case 'BLOOD_DONORS':
-        return <BloodDonorsView donors={mockUsers.filter(u => u.skills.includes(require('./types').SkillType.BLOOD))} />;
+        return <BloodDonorsView donors={mockUsers.filter(u => u.skills.includes(SkillType.BLOOD))} />;
       case 'PROFILE':
         return currentUser ? 
           <ProfileView user={currentUser} onLogout={handleLogout} /> : 
@@ -75,7 +75,7 @@ const App: React.FC = () => {
     <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'} pb-24 transition-colors duration-300`}>
       {/* Top Header */}
       <header className="sticky top-0 z-50 bg-emerald-600 text-white shadow-lg p-4 flex justify-between items-center rounded-b-2xl">
-        <div className="flex items-center gap-3" onClick={() => setCurrentView('HOME')}>
+        <div className="flex items-center gap-3 cursor-pointer" onClick={() => setCurrentView('HOME')}>
           <div className="bg-white p-1 rounded-full text-emerald-600">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
@@ -117,19 +117,6 @@ const App: React.FC = () => {
           ))}
         </div>
       </nav>
-
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.4s ease-out;
-        }
-        .pb-safe {
-          padding-bottom: env(safe-area-inset-bottom);
-        }
-      `}} />
     </div>
   );
 };
